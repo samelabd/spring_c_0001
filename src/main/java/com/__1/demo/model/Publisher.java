@@ -14,9 +14,6 @@ public class Publisher {
 
     String publisherAdd;
 
-    @OneToOne(mappedBy = "publisher")
-    @JoinColumn(name = "id")
-    Book book;
 
     public Publisher(String publisherName, String publisherAdd) {
         this.publisherName = publisherName;

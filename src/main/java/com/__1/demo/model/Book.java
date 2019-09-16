@@ -16,7 +16,6 @@ public class Book {
 
 
     @OneToOne
-    @JoinColumn(name = "publisherId")
     Publisher publisher;
 
 //    @OneToOne

@@ -1,9 +1,7 @@
 package com.__1.demo.repositories;
 
+import com.__1.demo.model.Publisher;
 import org.springframework.data.repository.CrudRepository;
 
-import com.__1.demo.model.Publisher;
-
-public interface PublisherRepository extends CrudRepository<Publisher,Long>{
-
+public interface PublisherRepository extends CrudRepository<Publisher, Long> {
 }

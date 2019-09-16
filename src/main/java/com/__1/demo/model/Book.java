@@ -13,12 +13,15 @@ public class Book {
     Long id;
     String title;
     String isbn;
-    // change to publisher and mappedTo OneToOne
-    // 
-    
+
+
     @OneToOne
+    @JoinColumn(name = "publisherId")
     Publisher publisher;
 
+//    @OneToOne
+//    @JoinColumn(name="publisherId")
+//    Publisher publisher;
 
     @ManyToMany
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
@@ -33,6 +36,11 @@ public class Book {
     }
 
     public Book() {
+    }
+
+    public Book(String title, String isbn) {
+        this.title = title;
+        this.isbn = isbn;
     }
 
     public Book(String title, String isbn, Publisher publisher) {

@@ -5,15 +5,24 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import static javax.persistence.GenerationType.*;
+
 
 @Entity
 public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    Long id;
 
+   
+
+    private String firstName;
+    private String lastName;
+
+    @ManyToMany(mappedBy = "authors")
+    private Set<Book> books = new HashSet<>();
+    
+    
     public Long getId() {
         return id;
     }
@@ -21,12 +30,7 @@ public class Author {
     public void setId(Long id) {
         this.id = id;
     }
-
-    private String firstName;
-    private String lastName;
-
-    @ManyToMany(mappedBy = "authors")
-    private Set<Book> books = new HashSet<>();
+   
 
     public Author() {
     }

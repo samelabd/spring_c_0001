@@ -54,7 +54,7 @@ public class BootStrapInit implements ApplicationListener<ContextRefreshedEvent>
 		b2.getAuthors().add(a2);
 		
 		b1.getAuthors().add(a1);
-		b1.getAuthors().add(a2);
+//		b1.getAuthors().add(a2);
 		
 		
 		authorRep.save(a1);

@@ -56,7 +56,7 @@ public class BootStrapInit implements ApplicationListener<ContextRefreshedEvent>
 		a2.getBooks().add(b2);
 
 
-		
+		// I have to save author before add another one to book instance
 		b1.getAuthors().add(a1);
 		authorRep.save(a1);
 		authorRep.save(a2);

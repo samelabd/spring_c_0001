@@ -15,6 +15,10 @@ public class Publisher {
     String publisherAdd;
 
 
+    public Publisher() {
+
+    }
+
     public Publisher(String publisherName, String publisherAdd) {
         this.publisherName = publisherName;
         this.publisherAdd = publisherAdd;

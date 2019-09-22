@@ -65,6 +65,8 @@ public class BootStrapInit implements ApplicationListener<ContextRefreshedEvent>
 		
 		publisherRep.save(p1);
 		publisherRep.save(p2);
+		b1.setPublisher(p1);
+		b2.setPublisher(p2);
 		bookRep.save(b1);
 		bookRep.save(b2);
 		

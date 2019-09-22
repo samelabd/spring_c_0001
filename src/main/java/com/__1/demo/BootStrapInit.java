@@ -46,19 +46,22 @@ public class BootStrapInit implements ApplicationListener<ContextRefreshedEvent>
 		b1.setIsbn("123789");
 		
 		b2.setTitle("World is Rounded");
+
 		b2.setIsbn("453525342");
 		
 		b1.setPublisher(p1);
-		b2.setPublisher(p2);
+//		b2.setPublisher(p2);
 
-		b2.getAuthors().add(a2);
+		a1.getBooks().add(b1);
+		a2.getBooks().add(b2);
+
+
 		
 		b1.getAuthors().add(a1);
-//		b1.getAuthors().add(a2);
-		
-		
 		authorRep.save(a1);
 		authorRep.save(a2);
+		b1.getAuthors().add(a2);
+		b2.getAuthors().add(a1);
 		
 		publisherRep.save(p1);
 		publisherRep.save(p2);
